@@ -1,3 +1,4 @@
+//take original carousel <img> and load it as background of parent tag
 var $item = $('.carousel .item');
 var $wHeight = $(window).height();
 $item.eq(0).addClass('active');
@@ -14,11 +15,13 @@ $('.carousel img').each(function() {
     $(this).remove();
 });
 
+//adjust element height to present viewport height
 $(window).on('resize', function (){
     $wHeight = $(window).height();
     $item.height($wHeight);
 });
 
+//standard carousel properties
 $('.carousel').carousel({
     interval: 6000,
     pause: "hover"
