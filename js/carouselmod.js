@@ -2,7 +2,7 @@ var $item = $('.carousel .item');
 var $wHeight = $(window).height();
 $item.eq(0).addClass('active');
 $item.height($wHeight);
-$item.addClass('full-screen');
+$item.addClass('slideshow-full-screen');
 
 $('.carousel img').each(function() {
     var $src = $(this).attr('src');
@@ -21,5 +21,5 @@ $(window).on('resize', function (){
 
 $('.carousel').carousel({
     interval: 6000,
-    pause: "false"
+    pause: "hover"
 });
